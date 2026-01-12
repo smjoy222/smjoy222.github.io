@@ -581,3 +581,315 @@ var(--bg-color);
     box-shadow: var(--neon-box-shadow);
   }
 }
+
+/* ============================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ============================================ */
+
+/* Large Tablets and Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+  :root {
+    --big-font: 2rem;
+    --h2-font: 2.5rem;
+    --normal-font: 1.5rem;
+  }
+  
+  body {
+    padding: 0 5%;
+  }
+  
+  header {
+    padding: 18px 5%;
+  }
+  
+  .home {
+    flex-direction: column-reverse;
+    padding: 100px 5% 50px;
+  }
+  
+  .home-content {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .home-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+  }
+  
+  .skill-main {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  :root {
+    --big-font: 1.8rem;
+    --h2-font: 2rem;
+    --normal-font: 1.2rem;
+  }
+  
+  header {
+    padding: 15px 4%;
+  }
+  
+  .logo {
+    font-size: 22px;
+  }
+  
+  /* Mobile Menu */
+  #menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  .navlist {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background: rgba(37, 8, 33, 0.98);
+    flex-direction: column;
+    padding: 2rem 0;
+    transition: 0.3s;
+    z-index: 999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .navlist.active {
+    left: 0;
+  }
+  
+  .navlist li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .navlist li a {
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: block;
+  }
+  
+  /* Home Section */
+  .home {
+    padding: 80px 4% 40px;
+  }
+  
+  .home-content h1 {
+    font-size: 2rem;
+  }
+  
+  .change-text h3 {
+    font-size: 1.3rem;
+  }
+  
+  .home-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .btn-box {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .info-box {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Skills Section */
+  .skills {
+    padding: 60px 4%;
+  }
+  
+  .main-text span {
+    font-size: 0.9rem;
+  }
+  
+  .main-text h2 {
+    font-size: 2rem;
+  }
+  
+  .skill-left h3,
+  .skill-right h3 {
+    font-size: 1.5rem;
+  }
+  
+  .professional {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  /* Projects Grid */
+  .achievements-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  /* Timeline for Experience */
+  .timeline-container {
+    padding: 0 1rem;
+  }
+  
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 3rem;
+    padding-right: 0;
+  }
+  
+  .timeline-content {
+    width: 100%;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  :root {
+    --big-font: 1.5rem;
+    --h2-font: 1.8rem;
+    --normal-font: 1rem;
+  }
+  
+  body {
+    padding: 0 3%;
+  }
+  
+  header {
+    padding: 12px 3%;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  #menu-icon {
+    font-size: 24px;
+  }
+  
+  /* Home Section */
+  .home {
+    padding: 70px 3% 30px;
+  }
+  
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .change-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .home-content p {
+    font-size: 0.9rem;
+  }
+  
+  .home-img {
+    max-width: 280px;
+  }
+  
+  .liquid-shape {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .img-box img {
+    width: 280px;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  /* Skills */
+  .skills {
+    padding: 50px 3%;
+  }
+  
+  .main-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .skill-bar .info p {
+    font-size: 0.9rem;
+  }
+  
+  .professional {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .box {
+    padding: 1.5rem;
+  }
+  
+  /* Education, Experience, Projects */
+  .education,
+  .experience,
+  .projects,
+  .achievements {
+    padding: 50px 3%;
+  }
+  
+  .achievement-card,
+  .project-card,
+  .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  .achievement-title,
+  .project-title {
+    font-size: 1.2rem;
+  }
+  
+  /* Project Tools Tags */
+  .project-tools,
+  .tool-tag {
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small Devices (360px and below) */
+@media (max-width: 360px) {
+  :root {
+    --big-font: 1.3rem;
+    --h2-font: 1.5rem;
+  }
+  
+  .home-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .change-text h3 {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 7px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .main-text h2 {
+    font-size: 1.5rem;
+  }
+}

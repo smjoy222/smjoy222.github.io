@@ -14,6 +14,33 @@ let currentWordIndex = 0;
 let maxWordIndex = words.length - 1;
 words[currentWordIndex].style.opacity = "1";
 
+// Mobile Menu Toggle
+let menuIcon = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.navlist');
+
+if (menuIcon && navlist) {
+    menuIcon.addEventListener('click', () => {
+        navlist.classList.toggle('active');
+        menuIcon.classList.toggle('bi-x');
+    });
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('.navlist li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navlist.classList.remove('active');
+            menuIcon.classList.remove('bi-x');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!menuIcon.contains(e.target) && !navlist.contains(e.target)) {
+            navlist.classList.remove('active');
+            menuIcon.classList.remove('bi-x');
+        }
+    });
+}
+
 let changeText = () => {
     let currentWord = words[currentWordIndex];
     let nextWord = currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
