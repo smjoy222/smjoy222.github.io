@@ -78,4 +78,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Handle hash in URL on page load (for links from other pages)
+    if (window.location.hash) {
+        setTimeout(function() {
+            const targetElement = document.querySelector(window.location.hash);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
+    }
 });
