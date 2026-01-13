@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <!-- Neon cyan glow filter -->
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Neon text glow -->
+    <filter id="textNeonGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Circular clip mask -->
+    <clipPath id="circleClip">
+      <circle cx="100" cy="100" r="100"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Everything inside circular clip -->
+  <g clip-path="url(#circleClip)">
+    <!-- Dark Background -->
+    <rect width="200" height="200" fill="#250821"/>
+    
+    <!-- Outer Neon Ring - Cyan -->
+    <circle cx="100" cy="100" r="95" fill="none" stroke="#12f7ff" stroke-width="2.5" opacity="0.8" filter="url(#neonGlow)"/>
+    
+    <!-- Inner Neon Ring -->
+    <circle cx="100" cy="100" r="80" fill="none" stroke="#12f7ff" stroke-width="1.5" opacity="0.4" filter="url(#neonGlow)"/>
+    
+    <!-- Center Circle Background -->
+    <circle cx="100" cy="100" r="85" fill="#250821" opacity="0.9"/>
+    
+    <!-- Main Neon Circle Border -->
+    <circle cx="100" cy="100" r="85" fill="none" stroke="#12f7ff" stroke-width="1" opacity="0.6" filter="url(#neonGlow)"/>
+    
+    <!-- JOY Text with Neon Glow -->
+    <text x="100" y="115" font-family="Arial, sans-serif" font-size="68" font-weight="900" text-anchor="middle" fill="#12f7ff" letter-spacing="3" filter="url(#textNeonGlow)">
+      JOY
+    </text>
+    
+    <!-- Neon accent dots around circle -->
+    <circle cx="100" cy="25" r="2.5" fill="#12f7ff" filter="url(#neonGlow)"/>
+    <circle cx="175" cy="100" r="2.5" fill="#12f7ff" filter="url(#neonGlow)"/>
+    <circle cx="100" cy="175" r="2.5" fill="#12f7ff" filter="url(#neonGlow)"/>
+    <circle cx="25" cy="100" r="2.5" fill="#12f7ff" filter="url(#neonGlow)"/>
+    
+    <!-- Diagonal accent dots -->
+    <circle cx="142" cy="58" r="2" fill="#12f7ff" opacity="0.6" filter="url(#neonGlow)"/>
+    <circle cx="58" cy="142" r="2" fill="#12f7ff" opacity="0.6" filter="url(#neonGlow)"/>
+    <circle cx="142" cy="142" r="2" fill="#12f7ff" opacity="0.6" filter="url(#neonGlow)"/>
+    <circle cx="58" cy="58" r="2" fill="#12f7ff" opacity="0.6" filter="url(#neonGlow)"/>
+  </g>
+</svg>

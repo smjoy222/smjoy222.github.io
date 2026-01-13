@@ -4,10 +4,9 @@
         <title>JOY-Personal Portfolio | About</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Laravel default favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://laravel.com/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://laravel.com/img/favicon/favicon-16x16.png">
-    <link rel="shortcut icon" href="https://laravel.com/favicon.ico">
+    <!-- JOY Branding Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="alternate icon" href="assets/images/favicon.svg">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Bootstrap Icons CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -15,21 +14,7 @@
 </head>
 <body>
             <header>
-                <div class="logo">
-                    <svg class="joy-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Background circle -->
-                        <circle cx="50" cy="50" r="48" fill="none" stroke="#12f7ff" stroke-width="2"/>
-                        <!-- Letter J -->
-                        <path d="M 35 30 L 35 55 Q 35 65 45 65 L 50 65" fill="none" stroke="#12f7ff" stroke-width="3" stroke-linecap="round"/>
-                        <!-- Letter O -->
-                        <circle cx="65" cy="50" r="18" fill="none" stroke="#12f7ff" stroke-width="3"/>
-                        <!-- Letter Y -->
-                        <line x1="75" y1="30" x2="80" y2="45" stroke="#12f7ff" stroke-width="3" stroke-linecap="round"/>
-                        <line x1="85" y1="30" x2="80" y2="45" stroke="#12f7ff" stroke-width="3" stroke-linecap="round"/>
-                        <line x1="80" y1="45" x2="80" y2="65" stroke="#12f7ff" stroke-width="3" stroke-linecap="round"/>
-                    </svg>
-                    <span>Joy</span>
-                </div>
+                <a class="logo" href="index.html"><span>J</span>oy</a>
                 <ul class="navlist">    
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html#skills">Skills</a></li>
@@ -45,7 +30,7 @@
         <!--about section-->
         <section id="about" class="about">
             <div class="img-about">
-                <img src="assets/images/logo.png" alt="">
+                <img src="assets/images/logo.png" alt="Profile">
                 <div class="info-about1">
                     <span>1+</span>
                     <p>Years of Experience</p>
@@ -61,12 +46,29 @@
             </div>
 
             <div class="about-content">
-                <span>Let me introduce myself</span>
-                <h2>About Me</h2>
-                <h3>A story of good</h3>
-                <p>I am a CSE graduate with hands-on experience in Deep Learning research, having completed my thesis and published two research papers. My primary interests lie in Data Science, while I am also actively learning MERN stack web development to build modern, scalable applications.
-                <br>I am passionate about continuous learning and applying research knowledge to real-world problems. Currently, I am seeking internship or job opportunities where I can grow professionally and contribute effectively to a dynamic team.</p>
+                <div class="about-header">
+                    <span class="about-label">Let me introduce myself</span>
+                    <h2>About Me</h2>
+                    <h3>A story of good</h3>
+                </div>
                 
+                <div class="about-text">
+                    <div class="text-block">
+                        <p><i class="bi bi-star-fill"></i> I am a <strong>CSE graduate from Daffodil International University</strong> with hands-on experience in <strong>Deep Learning research</strong>, having completed my thesis and published two research papers.</p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <p><i class="bi bi-star-fill"></i> My primary interests lie in <strong>Data Science</strong>, while I am also actively learning <strong>MERN stack web development</strong> to build modern, scalable applications.</p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <p><i class="bi bi-star-fill"></i> I am passionate about <strong>continuous learning</strong> and applying research knowledge to real-world problems.</p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <p><i class="bi bi-star-fill"></i> Currently, I am seeking <strong>internship or job opportunities</strong> where I can grow professionally and contribute effectively to a dynamic team.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <!--about section end-->
